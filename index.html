@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
         <!--HTML file auto generated using EmulatorJS codehelper-->
         <style>
@@ -34,9 +36,13 @@
             EJS_startOnLoaded = true;
             EJS_fullscreenOnLoaded = false;
             EJS_browserMode = "mobile"; 
-            EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+            
+            // CORREÇÃO DO ERRO DE REDE: Apontando para o servidor público sem bloqueio CORS
+            EJS_pathtodata = 'https://rawgit.com';
+            
             EJS_gameUrl = new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))]);
         </script>
-        <script src='https://cdn.emulatorjs.org/stable/data/loader.js'></script>
+        <!-- CORREÇÃO DO LOADER: Carregando o leitor a partir do servidor livre -->
+        <script src='https://rawgit.comloader.js'></script>
     </body>
 </html>
