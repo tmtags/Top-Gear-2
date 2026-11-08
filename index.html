@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-        <!--HTML file auto generated using EmulatorJS codehelper-->
         <style>
             body, html {
                 margin: 0;
@@ -37,12 +35,12 @@
             EJS_fullscreenOnLoaded = false;
             EJS_browserMode = "mobile"; 
             
-            // CORREÇÃO DO ERRO DE REDE: Apontando para o servidor público sem bloqueio CORS
+            // Servidor estável sem bloqueios de CORS
             EJS_pathtodata = 'https://rawgit.com';
             
-            EJS_gameUrl = new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))]);
+            // LINK DIRETO DO JOGO: Puxa o cartucho de um servidor público estável
+            EJS_gameUrl = 'https://nftstorage.link'; 
         </script>
-        <!-- CORREÇÃO DO LOADER: Carregando o leitor a partir do servidor livre -->
         <script src='https://rawgit.comloader.js'></script>
     </body>
 </html>
